@@ -161,8 +161,6 @@ function searchHistory(city) {
     
     displayHistory();
 }
-
-
 function displayHistory() {
     var pastCities = JSON.parse(localStorage.getItem('search-history')) || [];
 
@@ -181,10 +179,7 @@ function displayHistory() {
     clearEl.textContent = 'Clear History';
     historyEl.appendChild(clearEl);
 }
-
-
 submitEl.addEventListener('click', citySearch);
-
 
 historyEl.addEventListener('click', function (event) {
     
