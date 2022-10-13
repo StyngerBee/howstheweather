@@ -2,7 +2,6 @@
 :root {
     --lightBlue: #02c4ff;
     --black: #000000;
-    --pink: #cc8b86;
     --darkPurple: #413f54;
     --offBlack: #30292f;
     --shadow: rgba(128, 128, 128, .5)
@@ -63,7 +62,6 @@ aside>h2 {
     cursor: pointer;
     transform: translateY(-4px);
     transition: all 250ms ease;
-    background-color: var(--pink);
     color: var(--offBlack);
     box-shadow: 5px 5px 5px var(--shadow);
 }
