@@ -1,7 +1,7 @@
 
 :root {
-    --celadon: #0081a7;
-    --lightBlue: #dcedff;
+    --lightBlue: #02c4ff;
+    --black: #000000;
     --pink: #cc8b86;
     --darkPurple: #413f54;
     --offBlack: #30292f;
@@ -25,13 +25,13 @@ body {
 header {
     width: 100%;
     text-align: center;
-    background-image: linear-gradient(to bottom right, var(--darkPurple), var(--celadon));
-    color: var(--lightBlue);
+    background-image: linear-gradient(to bottom right, var(--darkPurple), var(--lightBlue));
+    color: var(--black);
     border-radius: 8px;
 }
 
 aside {
-    border: 2px solid var(--offBlack);
+    
     width: 20%;
     padding: 8px;
     text-align: center;
@@ -52,8 +52,8 @@ aside>h2 {
     display: block;
     margin: 4px auto;
     border: none;
-    background-color: var(--celadon);
-    color: var(--lightBlue);
+    background-color: var(--lightBlue);
+    color: var(--black);
     border-radius: 8px;
     padding: 4px;
     width: 65%;
@@ -73,7 +73,7 @@ aside>h2 {
     margin: 6px auto;
     border: none;
     background-color: var(--darkPurple);
-    color: var(--lightBlue);
+    color: var(--black);
     width: 65%;
     border-radius: 8px;
     padding: 4px;
@@ -83,8 +83,8 @@ aside>h2 {
     cursor: pointer;
     transform: translateY(-4px);
     transition: all 250ms ease;
-    background-color: var(--celadon);
-    color: var(--lightBlue);
+    background-color: var(--lightBlue);
+    color: var(--black);
     box-shadow: 5px 5px 5px var(--shadow);
 }
 
@@ -93,29 +93,34 @@ aside>h2 {
     justify-content: flex-start;
     align-items: center;
     flex-flow: row wrap;
+    float: right;
 }
 
 .current-city section {
     display: flex;
     width: 100%;
     justify-content: center;
+    float: right;
 }
 
 .current-list {
     width: 100%;
     text-align: center;
     margin: 0 0 0 35%;
+    float: right;
 }
 
 .current-list p {
     width: 20%;
+    float: right;
 }
 
 .current-list span {
     border-radius: 4px;
     padding: 4px;
-    color: var(--lightBlue)
-    
+    color: var(--black);
+    float: right;
+   
 }
 
 .current-city>p {
@@ -123,14 +128,17 @@ aside>h2 {
     font-size: large;
     font-weight: bold;
     text-shadow: 2px 2px var(--shadow);
+    float: right;
 }
 
 .five-days {
     margin: 8px;
-    background-color: var(--celadon);
+    background-color: var(--lightBlue);
     padding: 8px;
     border-radius: 8px;
-    color: var(--lightBlue)
+    color: var(--black);
+    justify-content: flex-end;
+    float: right;
 }
 
 .five-days:hover {
