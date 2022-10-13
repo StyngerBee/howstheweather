@@ -11,16 +11,16 @@ function init() {
 
 function citySearch() {
     var currentCity = searchEl.value.trim();
-    var geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${currentCity}&limit=1&appid=43ba4285918e75abf5e651327d673253`;
+    var geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${currentCity}&limit=1&appid=bdd27e1d7a97f67b1f92d2980334ed0f`;
 
-
+    var noResults = 'No Results';
     fetch(geoUrl)
         .then(function (response) {
             
             if (response.ok) {
                 return response.json();
             } else {
-                cityEl.textContent = 'Results Not Found';
+                cityEl.textContent = noResults;
                 return;
             }
         })
@@ -35,7 +35,7 @@ function citySearch() {
                 searchHistory(currentCity);
                 weatherSearch(currentCity, lat, lon);
             } else {
-                cityEl.textContent = 'Results Not Found';
+                cityEl.textContent = noResults;
                 return;
             }
         })
@@ -46,7 +46,7 @@ function citySearch() {
 
 
 function weatherSearch(city, lat, lon) {
-    var weatherUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=43ba4285918e75abf5e651327d673253&units=imperial`;
+    var weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=bdd27e1d7a97f67b1f92d2980334ed0f`;
 
 
     
@@ -193,13 +193,13 @@ historyEl.addEventListener('click', function (event) {
         return;
     }
     
-    var geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${currentCity}&limit=1&appid=43ba4285918e75abf5e651327d673253`;
+    var geoUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=bdd27e1d7a97f67b1f92d2980334ed0f`;
     fetch(geoUrl)
         .then(function (response) {
             if (response.ok) {
                 return response.json();
             } else {
-                (cityEl.textContent = 'Results Not Found');
+                (cityEl.textContent = noResults);
                 return;
             }
         })
@@ -211,7 +211,7 @@ historyEl.addEventListener('click', function (event) {
                 }
                 weatherSearch(currentCity, lat, lon);
             } else {
-                cityEl.textContent = 'Results Not Found';
+                cityEl.textContent = noResults;
                 return;
             }
         })
