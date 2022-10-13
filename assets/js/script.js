@@ -193,7 +193,7 @@ historyEl.addEventListener('click', function (event) {
         return;
     }
     
-    var geoUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + currentCity + '&limit=1&appid=bdd27e1d7a97f67b1f92d2980334ed0f';
+    var geoUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + currentCity + "&limit=1&appid=bdd27e1d7a97f67b1f92d2980334ed0f";
     fetch(geoUrl)
         .then(function (response) {
             if (response.ok) {
